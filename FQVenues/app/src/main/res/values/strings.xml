@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FQVenues</string>
+    <string name="location">Type Your address</string>
+    <string name="title_activity_gallery">Gallery</string>
+</resources>

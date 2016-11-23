@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="co.za.philippe.app.fqvenues">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <meta-data
+        android:name="com.google.android.maps.v2.API_KEY"
+        android:value="AIzaSyC33T-3YW1byvQArqqyLkBFb9VqUH1Lpzo" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".VenuesActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".GalleryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".VenuesActivity" />
+        </activity>
+        <activity android:name=".PhotoActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GalleryActivity"
+                android:screenOrientation="portrait" />
+        </activity>
+
+    </application>
+
+</manifest>
